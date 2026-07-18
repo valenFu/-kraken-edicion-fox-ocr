@@ -6,14 +6,14 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer 
-      className="py-16 relative z-10"
+      className="py-10 sm:py-16 relative z-10"
       style={{
         background: 'linear-gradient(180deg, rgba(10, 9, 8, 0.95) 0%, rgba(6, 5, 4, 0.98) 100%)',
         borderTop: '2px solid #d4a84330',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 mb-8 sm:mb-10">
           {/* Logo */}
           <div className="text-center md:text-left">
             <Link href="#inicio" className="inline-block">

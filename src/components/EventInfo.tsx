@@ -36,23 +36,23 @@ export default function EventInfo() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="la-carrera" className="py-32 relative rune-bg z-10">
+    <section id="la-carrera" className="py-16 sm:py-32 relative rune-bg z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
-          <div className="rune-divider mb-10" />
+          <div className="rune-divider mb-6 sm:mb-10" />
           <h2 className="section-title text-gold gold-glow">
             LA CARRERA
           </h2>
         </motion.div>
 
         {/* Event Cards */}
-        <div className="grid md:grid-cols-3 gap-10 mb-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10 mb-12 sm:mb-20">
           {eventCards.map((card, index) => {
             const colors = colorMap[card.color as keyof typeof colorMap];
             const Wrapper = card.link ? 'a' : 'div';
@@ -69,21 +69,21 @@ export default function EventInfo() {
               >
                 <Wrapper
                   {...wrapperProps}
-                  className="block card-stone p-10 text-center cursor-default h-full"
+                  className="block card-stone p-6 sm:p-10 text-center cursor-default h-full"
                   style={{
                     boxShadow: `0 0 30px ${colors.glow}`,
                   }}
                 >
                   <h3 
-                    className="font-cinzel text-2xl font-bold mb-4 tracking-wider"
+                    className="font-cinzel text-xl sm:text-2xl font-bold mb-3 sm:mb-4 tracking-wider"
                     style={{ color: colors.border }}
                   >
                     {card.title}
                   </h3>
-                  <p className="text-text-muted text-lg mb-3">{card.content}</p>
-                  <p className="text-foreground font-bold text-xl">{card.highlight}</p>
+                  <p className="text-text-muted text-base sm:text-lg mb-2 sm:mb-3">{card.content}</p>
+                  <p className="text-foreground font-bold text-lg sm:text-xl">{card.highlight}</p>
                   {card.link && (
-                    <p className="text-sm mt-4 tracking-wider" style={{ color: colors.border }}>
+                    <p className="text-xs sm:text-sm mt-3 sm:mt-4 tracking-wider" style={{ color: colors.border }}>
                       VER EN MAPA
                     </p>
                   )}
@@ -100,14 +100,14 @@ export default function EventInfo() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <div className="ornate-frame p-10 text-center relative">
+          <div className="ornate-frame p-6 sm:p-10 text-center relative">
             {/* Corner runes */}
-            <div className="absolute top-4 left-5 text-gold/40 text-2xl">ᚠ</div>
-            <div className="absolute top-4 right-5 text-gold/40 text-2xl">ᚦ</div>
-            <div className="absolute bottom-4 left-5 text-gold/40 text-2xl">ᚢ</div>
-            <div className="absolute bottom-4 right-5 text-gold/40 text-2xl">ᚨ</div>
+            <div className="absolute top-4 left-5 text-gold/40 text-2xl hidden sm:block">ᚠ</div>
+            <div className="absolute top-4 right-5 text-gold/40 text-2xl hidden sm:block">ᚦ</div>
+            <div className="absolute bottom-4 left-5 text-gold/40 text-2xl hidden sm:block">ᚢ</div>
+            <div className="absolute bottom-4 right-5 text-gold/40 text-2xl hidden sm:block">ᚨ</div>
             
-            <p className="text-foreground text-xl leading-relaxed relative z-10">
+            <p className="text-foreground text-base sm:text-xl leading-relaxed relative z-10">
               Una carrera nocturna de obstáculos que desafiará tus límites. 
               <span className="fire-glow text-fire-orange font-black"> Enfrenta obstáculos de fuego y agua</span>, 
               muros, lodo y mucho más. 

@@ -71,7 +71,7 @@ export default function CTA() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-32 relative overflow-hidden z-10">
+    <section className="py-16 sm:py-32 relative overflow-hidden z-10">
       {/* Epic background - sutil */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-r from-[#ff6b35]/10 via-transparent to-[#4dc9f6]/10" />
@@ -87,12 +87,12 @@ export default function CTA() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-cinzel-decorative text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-8 leading-tight">
+          <h2 className="font-cinzel-decorative text-3xl sm:text-4xl lg:text-6xl font-black text-foreground mb-6 sm:mb-8 leading-tight">
             ¡ÚNETE A LA{' '}
             <span className="fire-glow text-fire-orange">KRAKEN</span>{' '}
             EDICIÓN <span className="ice-glow text-ice-blue">FOX</span> OCR!
           </h2>
-          <p className="text-text-muted text-xl mb-10">
+          <p className="text-text-muted text-base sm:text-xl mb-6 sm:mb-10">
             No pierdas tu lugar. ¡Inscribite ahora!
           </p>
           <motion.a
@@ -101,7 +101,7 @@ export default function CTA() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-metallic btn-fire px-14 py-6 text-lg inline-block"
+            className="btn-metallic btn-fire px-8 sm:px-14 py-4 sm:py-6 text-sm sm:text-lg inline-block"
           >
             INSCRÍBETE AHORA
           </motion.a>

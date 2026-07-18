@@ -33,23 +33,23 @@ export default function Awards() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="premiacion" className="py-32 relative rune-bg z-10">
+    <section id="premiacion" className="py-16 sm:py-32 relative rune-bg z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
-          <div className="rune-divider mb-10" />
+          <div className="rune-divider mb-6 sm:mb-10" />
           <h2 className="section-title text-gold gold-glow">
             PREMIACIÓN
           </h2>
         </motion.div>
 
         {/* Awards Grid */}
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
           {awards.map((award, index) => (
             <motion.div
               key={award.modalidad}
@@ -57,7 +57,7 @@ export default function Awards() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -12, scale: 1.03 }}
-              className="card-stone p-10 text-center"
+              className="card-stone p-6 sm:p-10 text-center"
               style={{
                 boxShadow: `0 0 40px ${award.glowColor}`,
               }}

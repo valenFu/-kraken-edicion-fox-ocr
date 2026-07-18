@@ -56,28 +56,28 @@ export default function Pricing() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="inscripciones" className="py-32 relative rune-bg z-10">
+    <section id="inscripciones" className="py-16 sm:py-32 relative rune-bg z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-20"
         >
-          <div className="rune-divider mb-10" />
+          <div className="rune-divider mb-6 sm:mb-10" />
           <h2 className="section-title text-gold gold-glow">
             INSCRIPCIONES
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-10 mb-16">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 mb-10 sm:mb-16">
           {/* Pricing Table */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="card-stone p-10"
+            className="card-stone p-6 sm:p-10"
           >
             <h3 className="font-cinzel text-2xl font-bold text-gold mb-3 text-center">
               COSTOS DE INSCRIPCIÓN
@@ -121,9 +121,9 @@ export default function Pricing() {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="card-stone p-10"
+            className="card-stone p-6 sm:p-10"
           >
-            <h3 className="font-cinzel text-2xl font-bold text-gold mb-8 text-center">
+            <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-gold mb-6 sm:mb-8 text-center">
               FORMAS DE PAGO
             </h3>
 
@@ -169,7 +169,7 @@ export default function Pricing() {
         </div>
 
         {/* Important Notices */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {notices.map((notice, index) => (
             <motion.div
               key={notice.title}
@@ -203,14 +203,14 @@ export default function Pricing() {
         </div>
 
         {/* Full Policies */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
           {policies.map((policy, index) => (
             <motion.div
               key={policy.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.9 + index * 0.15 }}
-              className="card-stone p-8"
+              className="card-stone p-6 sm:p-8"
               style={{
                 borderTop: `3px solid ${policy.color}`,
               }}

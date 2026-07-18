@@ -47,8 +47,8 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
@@ -89,7 +89,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="font-cinzel-decorative text-5xl sm:text-6xl lg:text-7xl font-black text-foreground leading-[1.1] mb-8"
+              className="font-cinzel-decorative text-4xl sm:text-5xl lg:text-7xl font-black text-foreground leading-[1.1] mb-6 sm:mb-8"
             >
               <span className="block">¿ESTÁS</span>
               <span className="block">LISTO PARA</span>
@@ -101,7 +101,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-text-muted text-xl mb-10 max-w-lg leading-relaxed"
+              className="text-text-muted text-base sm:text-xl mb-6 sm:mb-10 max-w-lg leading-relaxed"
             >
               Preparate para la Kraken Edición Fox OCR, una carrera nocturna de obstáculos 
               que pondrá a prueba tu límite.
@@ -112,12 +112,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex gap-5 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center lg:justify-start"
             >
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe01OK_gxpEGqR-k66WhjM-f-hLsZksB0C_0GfDKTfFnBXsaw/viewform" target="_blank" rel="noopener noreferrer" className="btn-metallic btn-fire px-10 py-5 text-sm">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe01OK_gxpEGqR-k66WhjM-f-hLsZksB0C_0GfDKTfFnBXsaw/viewform" target="_blank" rel="noopener noreferrer" className="btn-metallic btn-fire px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm">
                 PARTICIPA EN LA CARRERA
               </a>
-              <a href="#la-carrera" className="btn-metallic px-10 py-5 text-sm">
+              <a href="#la-carrera" className="btn-metallic px-6 sm:px-10 py-4 sm:py-5 text-xs sm:text-sm">
                 MÁS INFORMACIÓN
               </a>
             </motion.div>
@@ -141,7 +141,7 @@ export default function Hero() {
                   ],
                 }}
                 transition={{ duration: 5, repeat: Infinity }}
-                className="w-[400px] h-[400px] rounded-full border-2 border-gold/30"
+                className="w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] rounded-full border-2 border-gold/30"
               />
             </div>
 
@@ -150,17 +150,17 @@ export default function Hero() {
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
-                className="w-[450px] h-[450px] rounded-full border border-gold/15"
+                className="w-[280px] h-[280px] sm:w-[450px] sm:h-[450px] rounded-full border border-gold/15"
               />
               <motion.div 
                 animate={{ rotate: -360 }}
                 transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
-                className="absolute w-[500px] h-[500px] rounded-full border border-fire-orange/10"
+                className="absolute w-[320px] h-[320px] sm:w-[500px] sm:h-[500px] rounded-full border border-fire-orange/10"
               />
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-                className="absolute w-[550px] h-[550px] rounded-full border border-ice-blue/10"
+                className="absolute w-[360px] h-[360px] sm:w-[550px] sm:h-[550px] rounded-full border border-ice-blue/10"
               />
             </div>
 
@@ -178,7 +178,7 @@ export default function Hero() {
                 alt="Kraken Edition Fox OCR Logo"
                 width={420}
                 height={420}
-                className="relative z-10 drop-shadow-[0_0_60px_rgba(212,168,67,0.4)]"
+                className="relative z-10 drop-shadow-[0_0_60px_rgba(212,168,67,0.4)] w-[200px] sm:w-[300px] lg:w-[420px] h-auto"
                 priority
               />
             </motion.div>
@@ -190,7 +190,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="mt-20 flex justify-center"
+          className="mt-12 sm:mt-20 flex justify-center"
         >
           <div className="relative">
             {/* Top ornamental line */}
@@ -198,7 +198,7 @@ export default function Hero() {
             
             {/* Main badge - Epic style */}
             <div 
-              className="relative px-20 py-8 text-center"
+              className="relative px-8 sm:px-20 py-5 sm:py-8 text-center"
               style={{
                 background: 'linear-gradient(180deg, #1a1815 0%, #0a0908 50%, #060504 100%)',
                 borderTop: '3px solid #d4a843',
@@ -207,19 +207,19 @@ export default function Hero() {
               }}
             >
               {/* Corner ornaments */}
-              <div className="absolute top-3 left-4 text-gold/70 text-xl">◆</div>
-              <div className="absolute top-3 right-4 text-gold/70 text-xl">◆</div>
-              <div className="absolute bottom-3 left-4 text-gold/70 text-xl">◆</div>
-              <div className="absolute bottom-3 right-4 text-gold/70 text-xl">◆</div>
+              <div className="absolute top-3 left-4 text-gold/70 text-xl hidden sm:block">◆</div>
+              <div className="absolute top-3 right-4 text-gold/70 text-xl hidden sm:block">◆</div>
+              <div className="absolute bottom-3 left-4 text-gold/70 text-xl hidden sm:block">◆</div>
+              <div className="absolute bottom-3 right-4 text-gold/70 text-xl hidden sm:block">◆</div>
               
               {/* Side ornaments */}
-              <div className="absolute top-1/2 -left-3 -translate-y-1/2 text-gold/50 text-2xl">⚔</div>
-              <div className="absolute top-1/2 -right-3 -translate-y-1/2 text-gold/50 text-2xl rotate-180">⚔</div>
+              <div className="absolute top-1/2 -left-3 -translate-y-1/2 text-gold/50 text-2xl hidden sm:block">⚔</div>
+              <div className="absolute top-1/2 -right-3 -translate-y-1/2 text-gold/50 text-2xl rotate-180 hidden sm:block">⚔</div>
               
-              <h3 className="font-cinzel-decorative text-3xl font-black text-gold gold-glow tracking-[0.2em]">
+              <h3 className="font-cinzel-decorative text-xl sm:text-3xl font-black text-gold gold-glow tracking-[0.1em] sm:tracking-[0.2em]">
                 VILLA DE SOTO
               </h3>
-              <p className="text-text-muted tracking-[0.5em] mt-2 text-sm">5 DE DICIEMBRE</p>
+              <p className="text-text-muted tracking-[0.2em] sm:tracking-[0.5em] mt-1 sm:mt-2 text-xs sm:text-sm">5 DE DICIEMBRE</p>
             </div>
             
             {/* Bottom ornamental line */}
