@@ -1,26 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=MedievalSharp&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #0a0a0a;
+  --color-foreground: #f0ece4;
+  --color-fire-orange: #ff6b35;
+  --color-fire-red: #ff4500;
+  --color-fire-gold: #d4731a;
+  --color-gold: #d4a843;
+  --color-gold-dark: #9a7a2e;
+  --color-ice-blue: #4dc9f6;
+  --color-ice-light: #a8e6ff;
+  --color-stone-dark: #121212;
+  --color-stone-medium: #1e1e1e;
+  --color-stone-light: #2a2a2a;
+  --color-text-muted: #b8b4ac;
+  --font-cinzel: 'Cinzel', serif;
+  --font-cinzel-decorative: 'Cinzel Decorative', cursive;
+  --font-medieval: 'MedievalSharp', cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #0a0a0a;
+  --foreground: #f0ece4;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0a0a0a url('/textures/textura-fondo.png') center center / cover no-repeat fixed;
+}
+
+/* ============================================
+   BODY - Textura de roca rúnica épica
+   ============================================ */
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-cinzel);
+  overflow-x: hidden;
+  background: transparent;
+}
+
+/* Overlay muy sutil solo para legibilidad del texto */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(10, 10, 10, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ============================================
+   RUNIC BACKGROUND PATTERN
+   ============================================ */
+
+.rune-bg {
+  position: relative;
+}
+
+/* ============================================
+   FIRE GLOW EFFECTS
+   ============================================ */
+
+.fire-glow {
+  text-shadow: 
+    0 0 10px rgba(255, 107, 53, 1),
+    0 0 20px rgba(255, 107, 53, 0.8),
+    0 0 40px rgba(255, 69, 0, 0.6),
+    0 0 80px rgba(212, 115, 26, 0.4);
+}
+
+/* ============================================
+   ICE GLOW EFFECTS
+   ============================================ */
+
+.ice-glow {
+  text-shadow: 
+    0 0 10px rgba(77, 201, 246, 1),
+    0 0 20px rgba(77, 201, 246, 0.8),
+    0 0 40px rgba(168, 230, 255, 0.6),
+    0 0 80px rgba(30, 144, 255, 0.4);
+}
+
+/* ============================================
+   GOLD GLOW EFFECTS
+   ============================================ */
+
+.gold-glow {
+  text-shadow: 
+    0 0 10px rgba(212, 168, 67, 1),
+    0 0 20px rgba(212, 168, 67, 0.8),
+    0 0 40px rgba(212, 168, 67, 0.5);
+}
+
+/* ============================================
+   EPIC METALLIC BUTTONS
+   ============================================ */
+
+.btn-metallic {
+  position: relative;
+  background: linear-gradient(180deg, 
+    #3d3830 0%, 
+    #2a2520 20%, 
+    #1a1510 50%, 
+    #2a2520 80%, 
+    #3d3830 100%);
+  border: 2px solid var(--color-gold-dark);
+  color: var(--color-foreground);
+  font-family: var(--font-cinzel);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btn-metallic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2),
+    rgba(212, 168, 67, 0.3),
+    transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-metallic:hover::before {
+  left: 150%;
+}
+
+.btn-metallic:hover {
+  border-color: var(--color-gold);
+  box-shadow: 
+    0 0 30px rgba(212, 168, 67, 0.5),
+    0 0 60px rgba(212, 168, 67, 0.2),
+    inset 0 0 20px rgba(212, 168, 67, 0.1);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   FIRE BUTTON
+   ============================================ */
+
+.btn-fire {
+  background: linear-gradient(180deg, 
+    #e85d2a 0%, 
+    #c44a1a 50%, 
+    #a03a10 100%);
+  border-color: #c44a1a;
+  box-shadow: 
+    0 6px 25px rgba(228, 93, 42, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn-fire:hover {
+  border-color: var(--color-fire-orange);
+  box-shadow: 
+    0 0 40px rgba(255, 107, 53, 0.6),
+    0 0 80px rgba(255, 69, 0, 0.3),
+    inset 0 0 25px rgba(255, 107, 53, 0.2);
+}
+
+/* ============================================
+   ICE BUTTON
+   ============================================ */
+
+.btn-ice {
+  background: linear-gradient(180deg, 
+    #3aa8d4 0%, 
+    #2a88b4 50%, 
+    #1a6894 100%);
+  border-color: #2a88b4;
+  box-shadow: 
+    0 6px 25px rgba(42, 136, 180, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.btn-ice:hover {
+  border-color: var(--color-ice-blue);
+  box-shadow: 
+    0 0 40px rgba(77, 201, 246, 0.6),
+    0 0 80px rgba(168, 230, 255, 0.3),
+    inset 0 0 25px rgba(77, 201, 246, 0.2);
+}
+
+/* ============================================
+   STONE CARD - Semi-transparente sobre la textura
+   ============================================ */
+
+.card-stone {
+  background: linear-gradient(160deg, 
+    rgba(26, 24, 21, 0.85) 0%, 
+    rgba(18, 16, 13, 0.9) 50%,
+    rgba(10, 9, 8, 0.92) 100%);
+  border: 2px solid rgba(42, 37, 32, 0.8);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card-stone::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #8b4513 0%,
+    #d4a843 25%,
+    #ff6b35 50%,
+    #d4a843 75%,
+    #4dc9f6 100%);
+  box-shadow: 0 0 15px rgba(212, 168, 67, 0.4);
+}
+
+.card-stone:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 168, 67, 0.4);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(212, 168, 67, 0.1);
+}
+
+/* ============================================
+   RUNE DIVIDER
+   ============================================ */
+
+.rune-divider {
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    #5a4a30 15%,
+    #d4a843 40%,
+    #ff6b35 50%,
+    #d4a843 60%,
+    #5a4a30 85%,
+    transparent 100%);
+  position: relative;
+  box-shadow: 0 0 15px rgba(212, 168, 67, 0.3);
+}
+
+.rune-divider::before {
+  content: '⚔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0a0a0a;
+  padding: 0 1rem;
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  text-shadow: 0 0 15px rgba(212, 168, 67, 0.8);
+}
+
+/* ============================================
+   SECTION TITLE
+   ============================================ */
+
+.section-title {
+  font-family: var(--font-cinzel-decorative);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  position: relative;
+  display: inline-block;
+}
+
+/* ============================================
+   ORNATE FRAME
+   ============================================ */
+
+.ornate-frame {
+  position: relative;
+  border: 3px solid transparent;
+  background: 
+    linear-gradient(rgba(10, 9, 8, 0.95), rgba(10, 9, 8, 0.95)) padding-box,
+    linear-gradient(135deg, 
+      #5a4a30 0%, 
+      #d4a843 25%,
+      #ff6b35 50%,
+      #d4a843 75%,
+      #4dc9f6 100%) border-box;
+  box-shadow: 
+    0 0 40px rgba(212, 168, 67, 0.15),
+    inset 0 0 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes fireRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.2);
+    opacity: 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes epicGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(212, 168, 67, 0.3),
+      0 0 40px rgba(255, 107, 53, 0.2),
+      0 0 60px rgba(77, 201, 246, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(212, 168, 67, 0.5),
+      0 0 80px rgba(255, 107, 53, 0.3),
+      0 0 120px rgba(77, 201, 246, 0.2);
+  }
+}
+
+.logo-glow {
+  animation: epicGlow 4s ease-in-out infinite;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, 
+    #5a4a30 0%, 
+    #d4a843 50%,
+    #5a4a30 100%);
+  border-radius: 6px;
+  border: 2px solid #2a2520;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, 
+    #9a7a2e 0%, 
+    #e8c860 50%,
+    #9a7a2e 100%);
+  box-shadow: 0 0 10px rgba(212, 168, 67, 0.5);
+}
+
+/* ============================================
+   FIRE BOTTOM - Simple gradient
+   ============================================ */
+
+.fire-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(0deg, 
+    rgba(180, 80, 20, 0.25) 0%,
+    rgba(139, 69, 19, 0.1) 50%,
+    transparent 100%);
+  pointer-events: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
 }
