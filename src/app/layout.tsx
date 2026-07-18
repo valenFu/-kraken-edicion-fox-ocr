@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="min-h-screen text-foreground antialiased">
+        <div className="bg-texture" />
         <BackgroundEffects />
         {children}
       </body>
