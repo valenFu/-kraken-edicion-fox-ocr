@@ -27,7 +27,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #0a0a0a url('/textures/textura-fondo.png') center center / cover no-repeat fixed;
+  background: #0a0a0a url('/textures/textura-fondo.webp') center center / cover no-repeat fixed;
 }
 
 /* ============================================
@@ -404,5 +404,15 @@ body::before {
   .section-title {
     font-size: 1.8rem;
     letter-spacing: 2px;
+  }
+
+  html {
+    background-size: 200%;
+    background-position: center center;
+  }
+
+  body::before {
+    background: 
+      radial-gradient(ellipse at 50% 50%, rgba(10, 10, 10, 0.35) 0%, rgba(10, 10, 10, 0.2) 100%);
   }
 }
