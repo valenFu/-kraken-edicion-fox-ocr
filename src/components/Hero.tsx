@@ -227,9 +227,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Epic Fire Bottom */}
-      <div className="fire-bottom" />
     </section>
   );
 }
