@@ -227,14 +227,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      {/* Sutil glow de fuego al fondo del hero */}
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
-        style={{
-          background: 'linear-gradient(0deg, rgba(180, 80, 20, 0.15) 0%, rgba(139, 69, 19, 0.05) 60%, transparent 100%)',
-        }}
-      />
     </section>
   );
 }
