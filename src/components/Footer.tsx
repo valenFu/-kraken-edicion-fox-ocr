@@ -34,7 +34,9 @@ export default function Footer() {
           {/* Social */}
           <div className="flex justify-center md:justify-end gap-5">
             <motion.a
-              href="#"
+              href="https://www.instagram.com/kraken_ocr/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -3 }}
               className="px-6 py-3 text-text-muted hover:text-gold transition-all"
               style={{
@@ -42,10 +44,12 @@ export default function Footer() {
                 background: 'linear-gradient(180deg, #1a1815 0%, #0a0908 100%)',
               }}
             >
-              Instagram
+              Kraken OCR
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.instagram.com/fox.ocr/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -3 }}
               className="px-6 py-3 text-text-muted hover:text-gold transition-all"
               style={{
@@ -53,7 +57,7 @@ export default function Footer() {
                 background: 'linear-gradient(180deg, #1a1815 0%, #0a0908 100%)',
               }}
             >
-              Facebook
+              Fox OCR
             </motion.a>
           </div>
         </div>
