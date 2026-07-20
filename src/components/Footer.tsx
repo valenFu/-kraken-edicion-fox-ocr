@@ -74,14 +74,6 @@ export default function Footer() {
           </p>
         </div>
       </div>
-
-      {/* Fire glow at the very bottom */}
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-        style={{
-          background: 'linear-gradient(0deg, rgba(180, 80, 20, 0.2) 0%, rgba(139, 69, 19, 0.1) 40%, transparent 100%)',
-        }}
-      />
     </footer>
   );
 }
