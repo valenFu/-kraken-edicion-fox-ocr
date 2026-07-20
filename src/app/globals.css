@@ -392,23 +392,6 @@ body::before {
 }
 
 /* ============================================
-   FIRE BOTTOM - Simple gradient
-   ============================================ */
-
-.fire-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(0deg, 
-    rgba(180, 80, 20, 0.25) 0%,
-    rgba(139, 69, 19, 0.1) 50%,
-    transparent 100%);
-  pointer-events: none;
-}
-
-/* ============================================
    RESPONSIVE
    ============================================ */
 
