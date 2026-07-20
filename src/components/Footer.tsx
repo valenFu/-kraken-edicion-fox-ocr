@@ -38,26 +38,28 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -3 }}
-              className="px-6 py-3 text-text-muted hover:text-gold transition-all"
+              className="px-6 py-3 text-text-muted hover:text-gold transition-all text-center"
               style={{
                 border: '2px solid #2a2520',
                 background: 'linear-gradient(180deg, #1a1815 0%, #0a0908 100%)',
               }}
             >
-              Kraken OCR
+              <span className="block text-sm">Instagram</span>
+              <span className="block text-xs text-gold/60 mt-1">@kraken_ocr</span>
             </motion.a>
             <motion.a
               href="https://www.instagram.com/fox.ocr/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -3 }}
-              className="px-6 py-3 text-text-muted hover:text-gold transition-all"
+              className="px-6 py-3 text-text-muted hover:text-gold transition-all text-center"
               style={{
                 border: '2px solid #2a2520',
                 background: 'linear-gradient(180deg, #1a1815 0%, #0a0908 100%)',
               }}
             >
-              Fox OCR
+              <span className="block text-sm">Instagram</span>
+              <span className="block text-xs text-gold/60 mt-1">@fox.ocr</span>
             </motion.a>
           </div>
         </div>
