@@ -8,8 +8,9 @@ export default function Footer() {
     <footer 
       className="py-10 sm:py-16 relative z-10"
       style={{
-        background: 'linear-gradient(180deg, rgba(10, 9, 8, 0.95) 0%, rgba(6, 5, 4, 0.98) 100%)',
+        background: 'linear-gradient(180deg, rgba(10, 9, 8, 0.95) 0%, rgba(6, 5, 4, 1) 100%)',
         borderTop: '2px solid #d4a84330',
+        marginBottom: '-1px',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
