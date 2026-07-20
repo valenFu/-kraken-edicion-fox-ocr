@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden rune-bg z-10">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden rune-bg z-10 pt-20">
       {/* Epic Background Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Fire vortex left - sutil */}

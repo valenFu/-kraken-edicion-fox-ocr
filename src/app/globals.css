@@ -71,6 +71,7 @@ body::before {
 
 .rune-bg {
   position: relative;
+  background-color: #0a0a0a;
 }
 
 /* ============================================
