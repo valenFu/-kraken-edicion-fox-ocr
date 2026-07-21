@@ -35,7 +35,7 @@ export default function RemeraOficial() {
           >
             <div className="relative">
               <Image
-                src="/remeraOficial.png"
+                src="/remeraOficial.webp"
                 alt="Remera Oficial Kraken Edición Fox OCR"
                 width={500}
                 height={500}
