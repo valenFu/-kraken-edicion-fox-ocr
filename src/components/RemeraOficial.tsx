@@ -1,12 +1,13 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 
 export default function RemeraOficial() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <section id="remera" className="py-16 sm:py-32 relative rune-bg z-10">
@@ -33,13 +34,23 @@ export default function RemeraOficial() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <div className="relative">
+            <div className="relative w-full max-w-[300px] sm:max-w-[400px]">
+              {/* Skeleton loader */}
+              {!loaded && (
+                <div className="absolute inset-0 rounded-lg animate-pulse"
+                  style={{
+                    background: 'linear-gradient(135deg, #1a1815 0%, #2a2520 50%, #1a1815 100%)',
+                  }}
+                />
+              )}
               <Image
-                src="/remeraOficial.webp"
+                src="/remeraOficial-opt.webp"
                 alt="Remera Oficial Kraken Edición Fox OCR"
-                width={500}
-                height={500}
-                className="w-full max-w-[300px] sm:max-w-[400px] h-auto drop-shadow-[0_0_30px_rgba(212,168,67,0.3)]"
+                width={600}
+                height={900}
+                loading="lazy"
+                className={`w-full h-auto drop-shadow-[0_0_30px_rgba(212,168,67,0.3)] transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+                onLoad={() => setLoaded(true)}
               />
             </div>
           </motion.div>
