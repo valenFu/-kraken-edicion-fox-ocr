@@ -9,6 +9,7 @@ const navLinks = [
   { href: '#inicio', label: 'INICIO' },
   { href: '#la-carrera', label: 'LA CARRERA' },
   { href: '#kit', label: 'KIT' },
+  { href: '#remera', label: 'REMERA' },
   { href: '#inscripciones', label: 'INSCRIPCIONES' },
   { href: '#premiacion', label: 'PREMIACIÓN' },
   { href: '#contacto', label: 'CONTACTO' },

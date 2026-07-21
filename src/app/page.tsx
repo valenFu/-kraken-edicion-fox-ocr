@@ -4,6 +4,7 @@ import EventInfo from '@/components/EventInfo';
 import Categories from '@/components/Categories';
 import Pricing from '@/components/Pricing';
 import Kit from '@/components/Kit';
+import RemeraOficial from '@/components/RemeraOficial';
 import Awards from '@/components/Awards';
 import Contact from '@/components/Contact';
 import CTA from '@/components/CTA';
@@ -18,6 +19,7 @@ export default function Home() {
       <Categories />
       <Pricing />
       <Kit />
+      <RemeraOficial />
       <Awards />
       <Contact />
       <CTA />
